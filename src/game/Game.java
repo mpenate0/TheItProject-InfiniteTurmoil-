@@ -1,5 +1,7 @@
 package game;
 
+import static org.lwjgl.opengl.GL11.*;
+
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 import org.lwjgl.LWJGLException;
@@ -15,10 +17,13 @@ public class Game {
 			e.printStackTrace();
 			Display.destroy();
 			System.exit(1);
-		
-		// Checks for Close
 		}
+		new OpenGLRenderer().openGL();
+			
 		while(!Display.isCloseRequested()) {
+			//Render
+			new OpenGLRenderer().Shapes();
+		
 			Display.update();
 			Display.sync(60);
 			
