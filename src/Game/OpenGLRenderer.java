@@ -26,7 +26,7 @@ public class OpenGLRenderer {
 		// Checks for Close
 		while(!Display.isCloseRequested()) {
 			//Render
-			
+			//Derpy Line
 			glBegin(GL_LINES);
 				glVertex2i(100, 100);
 				glVertex2i(200, 200);
