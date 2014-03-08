@@ -1,4 +1,4 @@
-package Game;
+package game;
 
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
