@@ -15,7 +15,7 @@ public class Game {
 			e.printStackTrace();
 			Display.destroy();
 			System.exit(1);
-			
+		
 		// Checks for Close
 		}
 		while(!Display.isCloseRequested()) {
