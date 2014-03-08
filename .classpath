@@ -2,12 +2,12 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="E:/Files/Project Files/Coding/ITProject/lib/Jars/lwjgl.jar">
+	<classpathentry kind="lib" path="G:/Users/Marcus Penate/Desktop/DesktopStuff/Jars/lwjgl.jar">
 		<attributes>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="E:/Files/Project Files/Coding/ITProject/lib/native"/>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="G:/Users/Marcus Penate/Desktop/DesktopStuff/native"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="E:/Files/Project Files/Coding/ITProject/lib/Jars/lwjgl_util.jar"/>
-	<classpathentry kind="lib" path="E:/Files/Project Files/Coding/ITProject/lib/Jars/slick-util.jar"/>
+	<classpathentry kind="lib" path="G:/Users/Marcus Penate/Desktop/DesktopStuff/Jars/lwjgl_util.jar"/>
+	<classpathentry kind="lib" path="G:/Users/Marcus Penate/Desktop/DesktopStuff/Jars/slick-util.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

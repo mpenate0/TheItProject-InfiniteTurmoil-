@@ -9,7 +9,7 @@ public class Game {
 		// Initialize Display and set Properties
 		try {
 			Display.setDisplayMode(new DisplayMode(1280, 720));
-			Display.setTitle("Infinite Turmoil - Prealpha v0.0.1 - Codename X");
+			Display.setTitle("Infinite Turmoil - Prealpha v0.0.1");
 			Display.create();
 		} catch (LWJGLException e) {
 			e.printStackTrace();
