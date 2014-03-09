@@ -14,9 +14,14 @@ public class Input {
 		}
 		
 		// Mouse Input
-		int MouseY = 720 - Mouse.getY();
-		int MouseX = Mouse.getX();
-		System.out.println(MouseY + ", "+ MouseX);
+	    try {
+			int MouseY = 720 - Mouse.getY();
+			int MouseX = Mouse.getX();
+			System.out.println(MouseY + ", "+ MouseX);
+	        Thread.sleep(250);
+	    } catch(InterruptedException ex) {
+	        Thread.currentThread().interrupt();
+	    }
 		
 		// Key W - Up
 		if (Keyboard.isKeyDown(Keyboard.KEY_W)) {
