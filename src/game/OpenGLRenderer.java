@@ -21,9 +21,13 @@ public class OpenGLRenderer {
 			glVertex2i(200, 200);
 			glVertex2i(150, 300);
 			if (Dot1X < 0) {
-				Dot1X = 1;
+				Dot1X++;
 			} if (Dot1Y < 0) {
-				Dot1Y = 1;
+				Dot1Y++;
+			} if (Dot1X > 1280) {
+				Dot1X = 1279;
+			}if (Dot1Y > 720) {
+				Dot1Y = 719;
 			}
 			
 		glEnd();
