@@ -15,19 +15,19 @@ public class Input {
 		
 		// Key W - Up
 		if (Keyboard.isKeyDown(Keyboard.KEY_W)) {
-			new OpenGLRenderer().Dot1Y--;
+			new Texture().Vector1Y--;
 		}
 		// Key A - Left
 		if (Keyboard.isKeyDown(Keyboard.KEY_A)) {
-			new OpenGLRenderer().Dot1X--;
+			new Texture().Vector1X--;
 		}
 		// Key S - Down
 		if (Keyboard.isKeyDown(Keyboard.KEY_S)) {
-			new OpenGLRenderer().Dot1Y++;
+			new Texture().Vector1Y++;
 		}
 		// Key D - Right
 		if (Keyboard.isKeyDown(Keyboard.KEY_D)) {
-			new OpenGLRenderer().Dot1X++;
+			new Texture().Vector1X++;
 		}
 		
 	}
