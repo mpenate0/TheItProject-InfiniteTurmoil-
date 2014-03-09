@@ -15,19 +15,15 @@ public class Input {
 		
 		// Key W - Up
 		if (Keyboard.isKeyDown(Keyboard.KEY_W)) {
-			new Texture().Vector1Y--;
 		}
 		// Key A - Left
 		if (Keyboard.isKeyDown(Keyboard.KEY_A)) {
-			new Texture().Vector1X--;
 		}
 		// Key S - Down
 		if (Keyboard.isKeyDown(Keyboard.KEY_S)) {
-			new Texture().Vector1Y++;
 		}
 		// Key D - Right
 		if (Keyboard.isKeyDown(Keyboard.KEY_D)) {
-			new Texture().Vector1X++;
 		}
 		
 	}

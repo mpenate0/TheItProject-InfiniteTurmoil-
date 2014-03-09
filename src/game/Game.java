@@ -1,16 +1,20 @@
+/*
+ * Everyone has to let me know if you committed any changes to the GitHub Repository.
+ * This is to ensure that we don't overwrite other changes.
+ */
+
 package game;
 
 import static org.lwjgl.opengl.GL11.*;
 
-import java.io.IOException;
-
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 import org.lwjgl.LWJGLException;
+import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
  
 public class Game {
-	public static void main(String[] args) throws SlickException, IOException {
+	public static void main(String[] args) {
 		// Initialize Display and set Properties
 		try {
 			Display.setDisplayMode(new DisplayMode(1280, 720));
@@ -19,21 +23,21 @@ public class Game {
 		} catch (LWJGLException e) {
 			e.printStackTrace();
 		}
+		//Creates shapes/objects w/ OpenGL
 		new OpenGLRenderer().openGL();
 		
+		//This is the game update cycle
 		while(!Display.isCloseRequested()) {
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Clears the screen before adding anything
-			//This is the game update cycle
+			
 			new OpenGLRenderer().Shape();
 			new Texture().Image();
 			new Input().Control();
 			
-			
-			
+			//Sync Settings
 			Display.update();
 			Display.sync(60);
 		}
 		Display.destroy();
-		System.exit(0);
 	}
 }
