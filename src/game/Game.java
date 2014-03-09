@@ -1,5 +1,8 @@
 package game;
 
+import static org.lwjgl.opengl.GL11.GL_COLOR_BUFFER_BIT;
+import static org.lwjgl.opengl.GL11.glClear;
+
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 import org.lwjgl.LWJGLException;
@@ -17,14 +20,15 @@ public class Game {
 		new OpenGLRenderer().openGL();
 			
 		while(!Display.isCloseRequested()) {
-			//Render
+			glClear(GL_COLOR_BUFFER_BIT); // Clears the screen before adding anything
+			//This is the game update cycle
 			new OpenGLRenderer().Shapes();
-		
+			new Input().Control();
+			
+			
+			
 			Display.update();
 			Display.sync(60);
-			
-			
-		// Checks for Close
 		}
 		Display.destroy();
 		System.exit(0);

@@ -14,8 +14,6 @@ public class OpenGLRenderer {
 	}
 	
 	public void Shapes() {
-		glClear(GL_COLOR_BUFFER_BIT); // Clears the screen before adding anything
-		
 		//Render
 		glBegin(GL_LINES);
 		glVertex2i(100, 100);
