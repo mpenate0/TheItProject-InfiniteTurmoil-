@@ -1,6 +1,5 @@
-/*
- * Everyone has to let me know if you committed any changes to the GitHub Repository.
- * This is to ensure that we don't overwrite other changes.
+/* Make sure you comment on your committed changes, listing everything you did in that change.
+ * Include file names that you changed and how they affected the functionability of the game
  */
 
 package game;
@@ -35,7 +34,7 @@ public class Game {
 			
 			//Sync
 			Display.update();
-			Display.sync(60);
+			Display.sync(30);
 		}
 		Display.destroy();
 	}
