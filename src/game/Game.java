@@ -1,7 +1,5 @@
 package game;
 
-import static org.lwjgl.opengl.GL11.*;
-
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 import org.lwjgl.LWJGLException;
@@ -15,8 +13,6 @@ public class Game {
 			Display.create();
 		} catch (LWJGLException e) {
 			e.printStackTrace();
-			Display.destroy();
-			System.exit(1);
 		}
 		new OpenGLRenderer().openGL();
 			
