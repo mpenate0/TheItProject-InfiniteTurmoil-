@@ -20,6 +20,12 @@ public class OpenGLRenderer {
 			glVertex2i(Dot1X, Dot1Y);
 			glVertex2i(200, 200);
 			glVertex2i(150, 300);
+			if (Dot1X < 0) {
+				Dot1X = 1;
+			} if (Dot1Y < 0) {
+				Dot1Y = 1;
+			}
+			
 		glEnd();
 		
 	}
