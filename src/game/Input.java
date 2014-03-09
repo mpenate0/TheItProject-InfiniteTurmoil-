@@ -15,16 +15,9 @@ public class Input {
 		}
 		
 		// Mouse Input
-	    try {
-			int MouseY = 720 - Mouse.getY();
-			int MouseX = Mouse.getX();
-			System.out.println(MouseY + ", "+ MouseX);
-	        Thread.sleep(1000);
-	    } catch(InterruptedException ex) {
-			System.out.println("Error in Mouse co-ordinate output");
-	        Thread.currentThread().interrupt();
-	    }
 		
+
+	    
 		// Key W - Up
 		if (Keyboard.isKeyDown(Keyboard.KEY_W)) {
 		}
