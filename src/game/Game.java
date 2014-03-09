@@ -23,10 +23,10 @@ public class Game {
 		} catch (LWJGLException e) {
 			e.printStackTrace();
 		}
-		//Creates shapes/objects w/ OpenGL
+		//Initialize OpenGL properties
 		new OpenGLRenderer().openGL();
 		
-		//This is the game update cycle
+		//Render
 		while(!Display.isCloseRequested()) {
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Clears the screen before adding anything
 			
@@ -34,7 +34,7 @@ public class Game {
 			new Texture().Image();
 			new Input().Control();
 			
-			//Sync Settings
+			//Sync
 			Display.update();
 			Display.sync(60);
 		}
