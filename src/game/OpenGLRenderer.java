@@ -1,8 +1,6 @@
 package game;
 
 import static org.lwjgl.opengl.GL11.*;
-import org.lwjgl.opengl.*;
-import org.lwjgl.*;
  
 public class OpenGLRenderer {
 	public void openGL() {
@@ -12,12 +10,17 @@ public class OpenGLRenderer {
 		glOrtho(0, 1280, 720, 0, 1, -1);
 		glMatrixMode(GL_MODELVIEW);
 	}
+
+	public static int Dot1X = 100;
+	public static int Dot1Y = 100;
 	
 	public void Shapes() {
 		//Render
-		glBegin(GL_LINES);
-		glVertex2i(100, 100);
-		glVertex2i(300, 300);
+		glBegin(GL_TRIANGLES);
+			glVertex2i(Dot1X, Dot1Y);
+			glVertex2i(200, 200);
+			glVertex2i(150, 300);
 		glEnd();
+		
 	}
 }

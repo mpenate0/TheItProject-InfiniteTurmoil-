@@ -1,10 +1,9 @@
 package game;
 
-import static org.lwjgl.opengl.GL11.GL_COLOR_BUFFER_BIT;
-import static org.lwjgl.opengl.GL11.glClear;
-
+import static org.lwjgl.opengl.GL11.*;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
+import org.lwjgl.opengl.GL11;
 import org.lwjgl.LWJGLException;
  
 public class Game {
@@ -20,7 +19,7 @@ public class Game {
 		new OpenGLRenderer().openGL();
 			
 		while(!Display.isCloseRequested()) {
-			glClear(GL_COLOR_BUFFER_BIT); // Clears the screen before adding anything
+			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Clears the screen before adding anything
 			//This is the game update cycle
 			new OpenGLRenderer().Shapes();
 			new Input().Control();
