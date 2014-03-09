@@ -3,6 +3,7 @@ package game;
 import org.lwjgl.input.Mouse;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.Display;
+
 import game.OpenGLRenderer;
 
 public class Input {
@@ -18,8 +19,9 @@ public class Input {
 			int MouseY = 720 - Mouse.getY();
 			int MouseX = Mouse.getX();
 			System.out.println(MouseY + ", "+ MouseX);
-	        Thread.sleep(250);
+	        Thread.sleep(1000);
 	    } catch(InterruptedException ex) {
+			System.out.println("Error in Mouse co-ordinate output");
 	        Thread.currentThread().interrupt();
 	    }
 		
