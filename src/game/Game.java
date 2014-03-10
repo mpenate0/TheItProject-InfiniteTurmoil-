@@ -5,9 +5,7 @@
 package game;
 
 import static org.lwjgl.opengl.GL11.*;
-
 import java.io.*;
-
 import org.lwjgl.*;
 import org.lwjgl.input.Mouse;
 import org.lwjgl.openal.AL;
@@ -52,12 +50,13 @@ public class Game {
 			glClear(GL_COLOR_BUFFER_BIT); // Clears the screen before adding anything
 			render();
 			
+			
 			new Input().Control(); //Initialize Controls
+			
 			
 			//Sync
 			Display.update();
 			Display.sync(60);
-			
 			}
 		Display.destroy();
 		AL.destroy();
@@ -67,14 +66,16 @@ public class Game {
 	//Gives objects to states
 	static void render() {
 		switch(state){
+		// Intro Elements
 		case INTRO:
 			
 			break;
 			
+			// Main Menu Elements
 		case MAIN_MENU:
 			try {
 				Music themeMusic = new Music("music/theme_menu.wav");
-				//themeMusic.play(1.0f, 1.0f);   Broken: Keeps on looping at beginning
+				themeMusic.play(1.0f, 1.0f);//   Broken: Keeps on looping at beginning
 			} catch (SlickException e1) {
 				e1.printStackTrace();
 			}
@@ -90,8 +91,14 @@ public class Game {
 				Display.destroy();
 				System.exit(0);
 			}
+			
+			if (Mouse.isButtonDown(0) && Mouse.getX() > 1035 && 720 - Mouse.getY() > 673) {
+				state = State.OPTIONS;
+			}
+			
 			break;
 			
+			// Options Elements
 		case OPTIONS:
 			glColor3f(0.5f,.5f,0.5f);
 			glRectf(255,255,120,140);

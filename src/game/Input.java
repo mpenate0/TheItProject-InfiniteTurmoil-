@@ -15,8 +15,7 @@ public class Input {
 		}
 		
 		// Mouse Input
-		
-
+		System.out.println(Mouse.getX() + ", " + (720 - Mouse.getY()));
 	    
 		// Key W - Up
 		if (Keyboard.isKeyDown(Keyboard.KEY_W)) {
